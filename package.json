@@ -1,0 +1,44 @@
+{
+  "name": "ai-sdk-provider-codex",
+  "version": "0.0.1",
+  "author": "Lawson Oates (https://github.com/lawsonoates)",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsgo -b --noEmit",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
+  },
+  "devDependencies": {
+    "@tsconfig/bun": "^1.0.10",
+    "@types/bun": "latest",
+    "@typescript/native-preview": "7.0.0-dev.20260524.1",
+    "oxfmt": "^0.51.0",
+    "oxlint": "^1.66.0",
+    "tsdown": "^0.22.0",
+    "ultracite": "7.7.0"
+  },
+  "peerDependencies": {
+    "@ai-sdk/openai": ">=2",
+    "typescript": "^5"
+  },
+  "peerDependenciesMeta": {
+    "@ai-sdk/openai": {
+      "optional": true
+    }
+  },
+  "packageManager": "bun@1.3.13"
+}
