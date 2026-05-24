@@ -14,7 +14,7 @@ interface PackageJson {
 
 const version = Bun.argv[2];
 if (!version || !VERSION_PATTERN.test(version)) {
-  console.error("Usage: bun script/publish.ts <semver>");
+  console.error("Usage: bun run release <semver>");
   process.exit(1);
 }
 
@@ -55,7 +55,7 @@ await $`bun run check`;
 await $`bun run build`;
 
 console.log(`\n=== publishing ${packageJson.name} ===\n`);
-await $`npm publish --access public`;
+await $`npm publish --access public --ignore-scripts`;
 
 await $`git add package.json bun.lock`;
 await $`git commit -m ${`release: ${packageJson.name} v${version}`}`;
