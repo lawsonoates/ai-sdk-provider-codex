@@ -1,6 +1,6 @@
 {
   "name": "ai-sdk-provider-codex",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "author": "Lawson Oates (https://github.com/lawsonoates)",
   "files": [
     "dist"
