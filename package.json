@@ -20,7 +20,8 @@
     "build": "tsdown",
     "typecheck": "tsgo -b --noEmit",
     "check": "ultracite check",
-    "fix": "ultracite fix"
+    "fix": "ultracite fix",
+    "publish": "bun run script/publish.ts"
   },
   "devDependencies": {
     "@tsconfig/bun": "^1.0.10",
